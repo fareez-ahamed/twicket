@@ -1,0 +1,59 @@
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// 
+@function tint($color, $percentage){
+  @return mix(#ffffff, $color, $percentage)
+}
+@import 'bower_components/flat-ui-sass/vendor/assets/stylesheets/flat-ui/variables';
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import 'bower_components/flat-ui-sass/vendor/assets/stylesheets/flat-ui';
+
+// @import 'bootstrap';
+// @import 'flat-ui-pro';
+.main-nav {
+	margin-top: 30px;
+}
+
+.login-box {
+	margin-top: 80px;
+}
+
+.mention
+{
+	// border-bottom: solid 1px $silver;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #ecf0f1;
+	border-radius: 10px;
+
+	
+	
+	.profile-img
+	{
+		padding:10px;
+	}
+}
+
+.mention-reply
+{
+	margin-top:50px;
+	margin-bottom:50px;
+}
+
+.thread-message
+{
+	background-color: #ecf0f1;
+	border-radius: 10px;
+	padding:10px;
+
+	margin-bottom:20px;
+}
+
+.ticket-reply
+{
+	padding-top:30px;
+}
+
+p.time
+{
+	color: $asbestos;
+}
