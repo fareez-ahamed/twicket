@@ -18,11 +18,11 @@ class Twitter
 		$stack = HandlerStack::create();
 
 		$middleware = new Oauth1([
-			'consumer_key'    => '',
-			'consumer_secret' => '',
-			'token'           => '',
-			'token_secret'    => ''
-			]);
+			'consumer_key'    => config('services.twitter.consumer_key'),
+			'consumer_secret' => config('services.twitter.consumer_secret'),
+			'token'           => config('services.twitter.token'),
+			'token_secret'    => config('services.twitter.token_secret')
+		]);
 
 		$stack->push($middleware);
 
