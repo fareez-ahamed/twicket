@@ -1,5 +1,5 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-// 
+//
 @function tint($color, $percentage){
   @return mix(#ffffff, $color, $percentage)
 }
@@ -9,9 +9,7 @@
 
 // @import 'bootstrap';
 // @import 'flat-ui-pro';
-.main-nav {
-	margin-top: 30px;
-}
+
 
 .login-box {
 	margin-top: 80px;
@@ -25,8 +23,8 @@
 	background-color: #ecf0f1;
 	border-radius: 10px;
 
-	
-	
+
+
 	.profile-img
 	{
 		padding:10px;
