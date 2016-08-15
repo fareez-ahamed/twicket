@@ -1,14 +1,4 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-//
-@function tint($color, $percentage){
-  @return mix(#ffffff, $color, $percentage)
-}
-@import 'bower_components/flat-ui-sass/vendor/assets/stylesheets/flat-ui/variables';
 @import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-@import 'bower_components/flat-ui-sass/vendor/assets/stylesheets/flat-ui';
-
-// @import 'bootstrap';
-// @import 'flat-ui-pro';
 
 
 .login-box {
@@ -22,8 +12,6 @@
 	padding-bottom: 5px;
 	background-color: #ecf0f1;
 	border-radius: 10px;
-
-
 
 	.profile-img
 	{
@@ -49,9 +37,4 @@
 .ticket-reply
 {
 	padding-top:30px;
-}
-
-p.time
-{
-	color: $asbestos;
 }
