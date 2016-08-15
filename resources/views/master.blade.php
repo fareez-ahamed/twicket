@@ -7,7 +7,7 @@
         <script src="/js/all.js"></script>
     </head>
     <body>
+        @yield('nav')
     	<div class="container">@yield('master-content')</div>
-        
     </body>
 </html>

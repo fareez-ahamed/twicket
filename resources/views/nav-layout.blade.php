@@ -1,10 +1,8 @@
 @extends('master')
 
-@section('master-content')
+@section('nav')
 
-
-
-<nav class="navbar navbar-inverse main-nav" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed" role="navigation">
 	<!-- Brand and toggle get grouped for better mobile display -->
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -22,20 +20,22 @@
 			<li class="active"><a href="#">Dashboard</a></li>
 			<li><a href="#">Open Tickets</a></li>
 		</ul>
-		<form class="navbar-form navbar-left" role="search">
-			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Search">
-			</div>
-		</form>
+
 		<ul class="nav navbar-nav navbar-right">
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }} <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 					<li><a href="/auth/logout">Logout</a></li>
-					
+
 				</ul>
 			</li>
 		</ul>
+
+		<form class="navbar-form navbar-right" role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search">
+			</div>
+		</form>
 	</div><!-- /.navbar-collapse -->
 </nav>
 
