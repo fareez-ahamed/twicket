@@ -2,7 +2,10 @@
 
 @section('nav')
 
-<nav class="navbar navbar-inverse navbar-fixed" role="navigation">
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+
 	<!-- Brand and toggle get grouped for better mobile display -->
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -37,6 +40,8 @@
 			</div>
 		</form>
 	</div><!-- /.navbar-collapse -->
+
+	</div>
 </nav>
 
 @yield('content')
