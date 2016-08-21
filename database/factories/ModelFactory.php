@@ -11,10 +11,11 @@
 |
 */
 
-$factory->define(App\User::class, function () {
+$factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
-        'name' => "John Doe",
-        'email' => "john@mail.com",
-        'password' => bcrypt("123456")
+        'name' => $faker->name,
+        'email' => $faker->safeEmail,
+        'password' => bcrypt(str_random(10)),
+        'remember_token' => str_random(10),
     ];
 });
