@@ -13,6 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['namespace' => 'App\Http\Controllers\Api\V1\Auth'], function () {
+
+    Route::post('/register', 'AuthController@postRegister');
+    Route::post('/login', 'AuthController@postLogin');
+
+    Route::get('/user', 'AuthController@getUser');
+    Route::get('/token/validate', 'AuthController@validateToken');
+
 });
