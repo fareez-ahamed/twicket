@@ -5,9 +5,9 @@ namespace App\Http\Controllers\Api\V1\Auth;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Api\ApiController;
 
-class AuthController extends Controller
+class AuthController extends ApiController
 {
 
     public function __construct()
@@ -34,5 +34,5 @@ class AuthController extends Controller
     {
         # code...
     }
-    
+
 }
