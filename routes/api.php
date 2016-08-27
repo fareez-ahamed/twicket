@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::group(['namespace' => 'App\Http\Controllers\Api\V1\Auth'], function () {
+Route::group(['namespace' => 'Auth'], function () {
 
     Route::post('/register', 'AuthController@postRegister');
     Route::post('/login', 'AuthController@postLogin');

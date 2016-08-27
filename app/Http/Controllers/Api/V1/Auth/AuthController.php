@@ -17,7 +17,7 @@ class AuthController extends ApiController
 
     public function postLogin(Request $req)
     {
-        # code...
+        return 'Bismillah';
     }
 
     public function postRegister(Request $req)
@@ -27,7 +27,7 @@ class AuthController extends ApiController
 
     public function getUser(Request $req)
     {
-        # code...
+        return 'Bismillah';
     }
 
     public function validateToken(Request $req)
