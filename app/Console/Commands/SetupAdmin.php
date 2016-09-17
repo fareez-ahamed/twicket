@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use App\User;
 
 class SetupAdmin extends Command
 {
@@ -11,7 +12,7 @@ class SetupAdmin extends Command
      *
      * @var string
      */
-    protected $signature = 'setup:admin {email}';
+    protected $signature = 'setup:admin {email} {name}';
 
     /**
      * The console command description.
@@ -37,8 +38,18 @@ class SetupAdmin extends Command
      */
     public function handle()
     {
-        User::create([
-            'email' => $this->argument('email')
+        $user = new User([
+            'email' => $this->argument('email'),
+            'name' => $this->argument('name'),
+            'password' => bcrypt(str_random(10)),
         ]);
+
+        $user->super_user = true;
+
+        try {
+            $user->save();
+        } catch (Exception $e) {
+            echo $e;
+        }
     }
 }
