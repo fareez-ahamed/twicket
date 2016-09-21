@@ -166,7 +166,7 @@ return [
         /*
          * Package Service Providers...
          */
-         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -227,7 +227,6 @@ return [
         /**
          * Package Facades
          */
-        'JWTAuth' => 'Tymon\JWTAuth\Facades\JWTAuth'
 
     ],
 
