@@ -4,7 +4,7 @@ import App from './App'
 import Login from './Login'
 import NavbarView from './components/NavbarView'
 import Dashboard from './components/Dashboard'
-import 'bootstrap-sass/assets/stylesheets/_bootstrap.scss'
+// import 'bootstrap-sass/assets/stylesheets/_bootstrap.scss'
 
 router.map({
   '/login': {
