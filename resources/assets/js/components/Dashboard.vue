@@ -1,7 +1,11 @@
-<template>
+<template language="jade">
   <div class="container navbar-view-margin">
-    <div class="well">
-      <h1>Dashboard Here</h1>
+    <div class="row">
+      <div class="col-md-3">
+        <a class="btn btn-default btn-block" v-link="{path:'/admin/user'}">
+          User Management
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -13,7 +17,4 @@ export default {
 </script>
 
 <style>
-.navbar-view-margin {
-  margin-top: 100px;
-}
 </style>
