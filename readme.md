@@ -1,5 +1,7 @@
 # twicket
 
+Customer support in Twitter :) 
+
 ## Contributing
 
 
