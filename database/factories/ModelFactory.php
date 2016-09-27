@@ -19,3 +19,15 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+/**
+ * Ahamed is a user used for testing
+ */
+$factory->defineAs(App\User::class, 'ahamed', function (Faker\Generator $faker) {
+    return [
+        'name' => 'Ahamed',
+        'email' => 'ahamed@gmail.com',
+        'password' => bcrypt('123456'),
+        'remember_token' => str_random(10),
+    ];
+});
