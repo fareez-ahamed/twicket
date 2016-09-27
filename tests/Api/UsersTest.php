@@ -7,11 +7,11 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class UsersTest extends TestCase
 {
     /**
-     * A basic test example.
+     * GET /api/user
      *
      * @return void
      */
-    public function testExample()
+    public function test_get_user()
     {
         $this->actingAsAhamed()
              ->json('get','/api/user')
