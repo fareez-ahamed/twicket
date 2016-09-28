@@ -17,4 +17,20 @@ class UsersTest extends TestCase
              ->json('get','/api/user')
              ->seeJson(['name' => 'Ahamed']);
     }
+
+    /**
+     * Create a new user
+     * POST /api/user
+     *
+     * @return void
+     */
+    // public function test_create_user()
+    // {
+    //     $this->actingAsAhamed()
+    //          ->json('post','/api/user',[
+    //              'name' => 'John Doe',
+    //              'email'=> 'john@gmail.com'
+    //          ])->seeJson();
+    // }
+
 }
