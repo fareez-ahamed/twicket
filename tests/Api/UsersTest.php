@@ -14,7 +14,7 @@ class UsersTest extends TestCase
     public function test_get_user()
     {
         $this->actingAsAhamed()
-             ->json('get','/api/user')
+             ->json('GET','/api/user')
              ->seeJson(['name' => 'Ahamed']);
     }
 
@@ -24,13 +24,13 @@ class UsersTest extends TestCase
      *
      * @return void
      */
-    // public function test_create_user()
-    // {
-    //     $this->actingAsAhamed()
-    //          ->json('post','/api/user',[
-    //              'name' => 'John Doe',
-    //              'email'=> 'john@gmail.com'
-    //          ])->seeJson();
-    // }
+    public function test_create_user()
+    {
+        $this->actingAsAhamed()
+             ->json('POST','/api/user',[
+                 'name' => 'John Doe',
+                 'email'=> 'john@gmail.com'
+             ])->seeJson(['success' => 'true']);
+    }
 
 }

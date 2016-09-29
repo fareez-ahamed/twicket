@@ -14,4 +14,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/user', 'UserController@getCurrentUser')
-     ->name('api.current_user');
+     ->name('api.user.current');
+
+Route::post('/user', 'UserController@createUser')
+     ->name('api.user.create');
