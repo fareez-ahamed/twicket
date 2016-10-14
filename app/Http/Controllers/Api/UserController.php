@@ -27,14 +27,18 @@ class UserController extends ApiController
      */
     public function createUser(Request $req)
     {
-        $this->validate($request, [
+        $this->validate($req, [
             'name'  => 'required',
-            'email' => 'required|unique'
+            'email' => 'required|unique:users'
         ]);
 
         try
         {
-            User::create($req->only('name','email'));
+            User::create([
+                'name'     => $req->input('name'),
+                'email'    => $req->input('email'),
+                'password' => bcrypt(str_random(10))
+            ]);
 
             return $this->respondWithSuccess();
         }

@@ -17,7 +17,7 @@ class ApiController extends Controller
      * @param  array  $headers
      * @return \Illuminate\Http\Response
      */
-    public function respond($data, $statusCode = null, $headers = [])
+    public function respond($data, $statusCode, $headers = [])
     {
         return response()->json($data, $statusCode, $headers);
     }
@@ -40,7 +40,7 @@ class ApiController extends Controller
      * @param  [type] $error [description]
      * @return [type]        [description]
      */
-    public function respondWithError($error, $statusCode = null)
+    public function respondWithError($error, $statusCode)
     {
         $errors = is_string($errors) ? [$errors] : $errors->getErrors()->all();
 

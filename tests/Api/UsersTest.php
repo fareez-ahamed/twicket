@@ -26,11 +26,13 @@ class UsersTest extends TestCase
      */
     public function test_create_user()
     {
-        $this->actingAsAhamed()
-             ->json('POST','/api/user',[
+        $response = $this->actingAsAhamed()
+             ->call('POST','/api/user',[
                  'name' => 'John Doe',
                  'email'=> 'john@gmail.com'
-             ])->seeJson(['success' => 'true']);
+             ]);
+
+        echo $response;
     }
 
 }
